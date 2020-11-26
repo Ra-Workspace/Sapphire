@@ -231,7 +231,7 @@ namespace Sapphire::Network::Packets
 
     WeatherChange = 0x025B, // updated 5.25
     PlayerTitleList = 0x037D, // global
-    Discovery = 0x031B, // global
+    Discovery = 0x031A, // global
 
     EorzeaTimeOffset = 0xF3B8, // global
 
@@ -356,8 +356,6 @@ namespace Sapphire::Network::Packets
     ClientTrigger = 0x03D3, // global
     DiscoveryHandler = 0x00E3, // global
 
-    PlaceFieldMarkerPreset = 0x023F, // global
-    PlaceFieldMarker = 0x01BA, // global
     SkillHandler = 0x01CD, // global
     GMCommand1 = 0x02AC, // global
     GMCommand2 = 0x029F, // global
