@@ -317,7 +317,7 @@ namespace Sapphire::Network::Packets
     SocialResponseHandler = 0x028D, // global
     CreateCrossWorldLS = 0x00AF, // global
 
-    ChatHandler = 0x0131, // global
+    ChatHandler = 0x01E6, // updated 5.25
     PartyChatHandler = 0x0065,
     PartySetLeaderHandler = 0x0208, // global
     LeavePartyHandler = 0x0337, // global
@@ -325,7 +325,7 @@ namespace Sapphire::Network::Packets
     DisbandPartyHandler = 0x0205, // global
 
     SocialListHandler = 0x0340, // global
-    SetSearchInfoHandler = 0x0314, // global
+    SetSearchInfoHandler = 0x01C5, // updated 5.25
     ReqSearchInfoHandler = 0x01E9, // global
     ReqExamineSearchCommentHandler = 0x00E7, // global
 
@@ -353,7 +353,7 @@ namespace Sapphire::Network::Packets
     ReqCountdownCancel = 0x0244, // global
 
     ZoneLineHandler = 0x0279, // global
-    ClientTrigger = 0x03D3, // global
+    ClientTrigger = 0x01E5, // updated 5.25
     DiscoveryHandler = 0x00E3, // global
 
     SkillHandler = 0x01CD, // global
@@ -361,9 +361,9 @@ namespace Sapphire::Network::Packets
     GMCommand2 = 0x029F, // global
     AoESkillHandler = 0x030C, // global
 
-    UpdatePositionHandler = 0x0236, // global
+    UpdatePositionHandler = 0x015F, // updated 5.25
 
-    InventoryModifyHandler = 0x0135, // global
+    InventoryModifyHandler = 0x0393, // updated 5.25 (Base offset: 0x039A)
     
     InventoryEquipRecommendedItems = 0x0149, // global
 
