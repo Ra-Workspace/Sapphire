@@ -46,10 +46,10 @@ namespace Sapphire::Network::Packets
     Ping = 0x0219, // global
     Init = 0x0185, // global
 
-    ActorFreeSpawn = 0x0239, // global
+    ActorFreeSpawn = 0x03E0, // updated 5.25
     InitZone = 0x00BA, // updated 5.25
 
-    EffectResult = 0x01C2, // global
+    EffectResult = 0x0280, // updated 5.25
     ActorControl = 0x03B6, // updated 5.25
     ActorControlSelf = 0x0200, // updated 5.25
     ActorControlTarget = 0x01DE, // updated 5.25
@@ -126,7 +126,6 @@ namespace Sapphire::Network::Packets
 
     FreeCompanyUpdateShortMessage = 0xF157, // global
 
-    AddStatusEffect = 0x0280, // updated 5.25
     StatusEffectList = 0x013D, // updated 5.25
     EurekaStatusEffectList = 0x0167, // global
     BossStatusEffectList = 0x0292, // updated 5.25
@@ -192,7 +191,7 @@ namespace Sapphire::Network::Packets
     EventPlay = 0x011E, // updated 5.25
     EventPlay4 = 0x02F3, // updated 5.25
     EventPlay8 = 0x023F, // global
-    EventPlay16 = 0x025B, // global
+    EventPlay16 = 0x025C, // global
     EventPlay32 = 0x0157, // updated 5.25 
     EventPlay64 = 0x02C1, // global
     EventPlay128 = 0x038A, // global
@@ -237,7 +236,7 @@ namespace Sapphire::Network::Packets
 
     EquipDisplayFlags = 0x00BE, // global
 
-    MiniCactpotInit = 0x0286, // global
+    MiniCactpotInit = 0x0114, // updated 5.25
     ShopMessage = 0x0197, // global
     LootMessage = 0x01B7, // global
 
@@ -265,7 +264,7 @@ namespace Sapphire::Network::Packets
 
     LandUpdateHouseName = 0x0257, // global
 
-    LandSetMap = 0x025B, // global
+    LandSetMap = 0x025A, // global
 
     //////////////////////////////////////////////////
 
