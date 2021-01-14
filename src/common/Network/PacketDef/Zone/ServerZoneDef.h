@@ -2310,7 +2310,7 @@ namespace Sapphire::Network::Packets::Server
       uint8_t unknown18;
       uint8_t discoveredSectorIdSoaMaybe;
       uint8_t unknown19;
-      uint32_t unknown20;
+      uint16_t unknown20;
     } destinations[5];
   };
 }
