@@ -2239,6 +2239,18 @@ namespace Sapphire::Network::Packets::Server
     uint8_t padding[3];
   };
 
+  struct FFXIVIpcSomeDirectorUnk4 : FFXIVIpcBasePacket< FFXIVIpcSomeDirectorUnk4 >
+  {
+    uint32_t eventId;
+    uint32_t param1;
+    uint32_t param2;
+    uint32_t param3;
+    uint8_t param4;
+    uint8_t unknown1;
+    uint16_t unknown2;
+    uint32_t unknown3;
+  }
+
   struct FFXIVIpcSubmarineStatusList : FFXIVIpcBasePacket< SubmarineStatusList >
   {
     struct SubmarineStatusItem
