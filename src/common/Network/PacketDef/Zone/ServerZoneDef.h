@@ -2256,8 +2256,7 @@ namespace Sapphire::Network::Packets::Server
     struct SubmarineStatusItem
     {
       uint16_t status;
-      uint8_t rank;
-      uint8_t unknown1;
+      uint16_t rank;
       uint32_t birthdate;
       uint32_t returnTime;
       uint32_t currentExp;
@@ -2273,57 +2272,41 @@ namespace Sapphire::Network::Packets::Server
       uint8_t dest3;
       uint8_t dest4;
       uint8_t dest5;
-      uint8_t unknown2;
+      uint8_t unknown0;
     } submarines[4];
   };
 
   struct FFXIVIpcSubmarineExplorationResult : FFXIVIpcBasePacket< SubmarineExplorationResult >
   {
+    uint16_t unknown0;
     uint16_t unknown1;
-    uint16_t unknown2;
-    struct SubmarineExplorationResultItem
+    struct ResultItem
     {
       uint8_t sectorId;
       uint8_t ratingExpMaybe;
       uint8_t discoveredSectorIdDss;
       uint8_t discoveredMapIdDssMaybe;
-      uint32_t unknown3;
-      uint8_t favor;
-      uint8_t unknown4;
-      uint16_t unknown5;
+      uint32_t unknown2;
+      uint32_t favor;
       uint32_t exp;
-      uint16_t itemId1;
-      uint16_t padding1;
-      uint16_t itemId2;
-      uint16_t padding2;
-      uint8_t quantity1;
-      uint8_t unknown6;
-      uint8_t quantity2;
-      uint8_t unknown7;
-      bool hq1;
-      bool hq2;
-      uint16_t padding3;
-      uint8_t surveillance1;
-      uint8_t unknown8;
-      uint16_t unknown9;
-      uint8_t surveillance2;
-      uint8_t unknown10;
-      uint16_t unknown11;
-      uint8_t retrieval1;
-      uint8_t unknown12;
-      uint16_t unknown13;
-      uint8_t retrieval2;
-      uint8_t unknown14;
-      uint16_t unknown15;
-      uint8_t itemQualityMessage1;
-      uint8_t unknown16;
-      uint16_t unknown17;
-      uint8_t itemQualityMessage2;
-      uint8_t unknown18;
+      uint32_t itemId1;
+      uint32_t itemId2;
+      uint16_t quantity1;
+      uint16_t quantity2;
+      uint8_t isHq1;
+      uint8_t isHq2;
+      uint16_t unknown3;
+      uint32_t surveillance1;
+      uint32_t surveillance2;
+      uint32_t retrieval1;
+      uint32_t retrieval2;
+      uint16_t itemQualityMessage1;
+      uint16_t unknown4;
+      uint16_t itemQualityMessage2;
       uint8_t discoveredSectorIdSoaMaybe;
-      uint8_t unknown19;
-      uint16_t unknown20;
-    } destinations[5];
+      uint8_t unknown5;
+    } destinationResults[5];
+    uint32_t unknown6;
   };
 }
 
