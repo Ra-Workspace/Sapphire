@@ -2278,7 +2278,7 @@ namespace Sapphire::Network::Packets::Server
     uint16_t unknown0;
     uint32_t currentExp;
     uint32_t totalExpForNextRank;
-    uint16_t unknown1;
+    uint16_t unlockedAirships;
     uint16_t airshipPart[4];
     int8_t destinations[5];
     char name[20];
@@ -2293,14 +2293,13 @@ namespace Sapphire::Network::Packets::Server
   struct FFXIVIpcAirshipExplorationResult : FFXIVIpcBasePacket< AirshipExplorationResult >
   {
     uint16_t rating; // 0=SS, 1=S, 2=A, 3=B, 4=C
-    uint8_t unknown0;
-    uint8_t unknown1;
+    uint16_t airshipSpeed;
     struct ResultItem
     {
       uint32_t exp;
       uint32_t favorResult;
       int8_t sectorId;
-      int8_t discoveredSectorId;
+      uint8_t discoveredSectorId;
       uint8_t expRating; // 0=100%, 1=75%, 2=50%, 3=25%
       uint8_t unknown3;
       uint32_t itemId[2];
@@ -2311,7 +2310,7 @@ namespace Sapphire::Network::Packets::Server
       uint16_t unknown4;
       uint8_t unknown5;
       uint8_t doubleDip; // 0=false, 1=true
-      uint8_t hq[2]; // 0=true, 1=false
+      uint8_t hq[2]; // 0=false, 1=true
       uint16_t unknown6; // isTierLoot3??
     } destinationResults[5];
     uint32_t unknown7;
@@ -2322,11 +2321,11 @@ namespace Sapphire::Network::Packets::Server
     struct AirshipStatusItem
     {
       uint32_t returnTime;
-      uint16_t rank;
+      uint16_t airshipSpeed;
       char name[20];
       uint16_t unknown1;
       uint8_t unknown2;
-      uint8_t destinations[5];
+      int8_t destinations[5];
       uint16_t unknown3;
     } airships[4];
       uint32_t unknown4[3];
@@ -2337,7 +2336,7 @@ namespace Sapphire::Network::Packets::Server
     struct SubmarineStatusItem
     {
       uint32_t returnTime;
-      uint16_t rank;
+      uint16_t submarineSpeed;
       uint16_t unknown1;
       char name[20];
       uint8_t unknown2[3];
@@ -2373,17 +2372,15 @@ namespace Sapphire::Network::Packets::Server
 
   struct FFXIVIpcSubmarineExplorationResult : FFXIVIpcBasePacket< SubmarineExplorationResult >
   {
-    uint8_t rating; // 0=SS, 1=S, 2=A, 3=B, 4=C
-    uint8_t unknown0;
-    uint8_t unknown1;
-    uint8_t unknown2;
+    uint16_t rating; // 0=SS, 1=S, 2=A, 3=B, 4=C
+    uint16_t submarineSpeed;
     struct ResultItem
     {
       uint8_t sectorId;
       uint8_t expRating; // 0=100%, 1=75%, 2=50%, 3=25%
       uint8_t discoveredSectorId;
       uint8_t firstTimeExploration; // 0=false, 1=true
-      uint8_t unknown3;
+      uint8_t unlockedSubmarineSlot;
       uint8_t doubleDip; // 0=false, 1=true
       uint16_t unknown4;
       uint32_t favorResult;
