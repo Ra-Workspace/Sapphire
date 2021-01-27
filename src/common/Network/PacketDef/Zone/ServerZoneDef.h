@@ -2280,7 +2280,7 @@ namespace Sapphire::Network::Packets::Server
     uint32_t totalExpForNextRank;
     uint16_t unlockedAirships;
     uint16_t airshipPart[4];
-    int8_t destinations[5];
+    uint8_t destinations[5];
     char name[20];
     uint8_t unknown2;
     uint16_t unknown3;
@@ -2298,7 +2298,7 @@ namespace Sapphire::Network::Packets::Server
     {
       uint32_t exp;
       uint32_t favorResult;
-      int8_t sectorId;
+      uint8_t sectorId;
       uint8_t discoveredSectorId;
       uint8_t expRating; // 0=100%, 1=75%, 2=50%, 3=25%
       uint8_t unknown3;
@@ -2325,7 +2325,7 @@ namespace Sapphire::Network::Packets::Server
       char name[20];
       uint16_t unknown1;
       uint8_t unknown2;
-      int8_t destinations[5];
+      uint8_t destinations[5];
       uint16_t unknown3;
     } airships[4];
       uint32_t unknown4[3];
