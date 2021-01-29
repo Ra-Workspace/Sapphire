@@ -2253,7 +2253,7 @@ namespace Sapphire::Network::Packets::Server
 
   struct FFXIVIpcAirshipStatusList : FFXIVIpcBasePacket< AirshipStatusList >
   {
-    uint8_t airshipCount;
+    uint8_t unlockedAirshipCount;
     uint8_t unknown0[3];
     struct AirshipStatusItem
     {
@@ -2278,7 +2278,7 @@ namespace Sapphire::Network::Packets::Server
     uint16_t unknown0;
     uint32_t currentExp;
     uint32_t totalExpForNextRank;
-    uint16_t unlockedAirships;
+    uint16_t unlockedAirshipCount;
     uint16_t airshipPart[4];
     uint8_t destinations[5];
     char name[20];
@@ -2300,7 +2300,7 @@ namespace Sapphire::Network::Packets::Server
       uint32_t favorResult;
       uint8_t sectorId;
       uint8_t discoveredSectorId;
-      uint8_t expRating; // 0=100%, 1=75%, 2=50%, 3=25%
+      uint8_t expRating; // 2=100%, 3=50%,
       uint8_t unknown3;
       uint32_t itemId[2];
       uint16_t quantity[2];
@@ -2328,7 +2328,6 @@ namespace Sapphire::Network::Packets::Server
       uint8_t destinations[5];
       uint16_t unknown3;
     } airships[4];
-      uint32_t unknown4[3];
   };
 
   struct FFXIVIpcSubmarineTimers : FFXIVIpcBasePacket< SubmarineTimers >
@@ -2346,7 +2345,7 @@ namespace Sapphire::Network::Packets::Server
 
   struct FFXIVIpcSubmarineProgressionStatus : FFXIVIpcBasePacket< SubmarineProgressionStatus >
   {
-      uint8_t unlockedSubmarines;
+      uint8_t unlockedSubmarineCount;
       uint8_t unlockedSectors[10];
       uint8_t exploredSectors[10];
       uint8_t unknown[2];
@@ -2363,7 +2362,8 @@ namespace Sapphire::Network::Packets::Server
       uint32_t currentExp;
       uint32_t totalExpForNextRank;
       uint16_t capacity;
-      char name[24];
+      char name[20];
+      uint16_t padding[2];
       uint16_t submarinePart[4];
       uint8_t destinations[5];
       uint8_t unknown0;
