@@ -1582,7 +1582,10 @@ namespace Sapphire::Network::Packets::Server
 
   struct FFXIVIpcWeatherChange : FFXIVIpcBasePacket< WeatherChange >
   {
-    uint32_t weatherId;
+    uint8_t weatherId;
+    uint8_t unknown1;
+    uint8_t unknown2;
+    uint8_t unknown3;
     float delay;
   };
 
