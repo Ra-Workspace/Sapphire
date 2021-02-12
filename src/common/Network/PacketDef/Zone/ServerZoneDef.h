@@ -412,10 +412,12 @@ namespace Sapphire::Network::Packets::Server
     uint64_t unknown4;
     uint32_t unknown5;
     uint32_t unknown6;
-    uint8_t unknow7;
+    uint8_t unknown7;
     uint8_t fcRank;
     char fcName[20];
+    uint16_t padding1;
     char fcTag[5];
+    uint16_t padding2;
   };
 
   struct FFXIVIpcExamineFreeCompanyInfo : FFXIVIpcBasePacket< ExamineFreeCompanyInfo >
