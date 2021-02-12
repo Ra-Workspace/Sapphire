@@ -54,7 +54,7 @@ namespace Sapphire::Network::Packets
     ActorOwner = 0x00E80, // global
     ActorSetPos = 0x0164, // updated v5.3
     AddStatusEffect = 0x0156, // updated v5.3
-    AirshipExplorationResult = 0x03200, // global
+    AirshipExplorationResult = 0x0090, // updated v5.3
     AirshipStatus = 0x02F7, // updated v5.3
     AirshipStatusList = 0x0333, // updated v5.3
     AirshipTimers = 0x01D60, // global
@@ -216,7 +216,7 @@ namespace Sapphire::Network::Packets
     SomeDirectorUnk4 = 0x023E, // updated v5.3
     SomeDirectorUnk8 = 0x028A0, // global
     StatusEffectList = 0x0314, // updated v5.3
-    SubmarineExplorationResult = 0x02BB0, // global
+    SubmarineExplorationResult = 0x0097, // updated v5.3
     SubmarineProgressionStatus = 0x03B40, // global
     SubmarineStatusList = 0x034F, // updated v5.3
     SubmarineTimers = 0x03DA0, // global
