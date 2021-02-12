@@ -110,7 +110,7 @@ namespace Sapphire::Network::Packets
     ExamineSearchComment = 0x01020, // global
     ExamineSearchInfo = 0x01E5, // updated v5.3
     FreeCompanyBoardMsg = 0x013C0, // global
-    FreeCompanyInfo = 0xF13D0, // global
+    FreeCompanyInfo = 0x032D, // updated v5.3?
     FreeCompanyUpdateShortMessage = 0xF1570, // global
     GCAffiliation = 0xF16F0, // global
     HateList = 0x01980, // global
@@ -132,7 +132,7 @@ namespace Sapphire::Network::Packets
     InventoryTransaction = 0x019A, // updated v5.3
     InventoryTransactionFinish = 0x039F, // updated v5.3
     ItemInfo = 0x00A6, // updated v5.3
-    LandInfoSign = 0x023D0, // global
+    LandInfoSign = 0x0206, // updated v5.3
     LandPriceUpdate = 0x02380, // global
     LandRename = 0x023A0, // global
     LandSetInitialize = 0x02340, // global
