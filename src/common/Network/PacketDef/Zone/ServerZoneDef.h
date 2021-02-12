@@ -399,6 +399,26 @@ namespace Sapphire::Network::Packets::Server
     uint32_t requestId;
   };
 
+  /**
+  * todo: not sure packet
+  */
+  struct FFXIVIpcFreeCompanyInfo : FFXIVIpcBasePacket< FreeCompanyInfo >
+  {
+    uint64_t fcId;
+    uint32_t unknown1;
+    uint32_t unknown2;
+    uint64_t unknown3;
+    uint64_t fcCredits;
+    uint64_t unknown4;
+    uint32_t unknown5;
+    uint32_t unknown6;
+    uint8_t unknow7;
+    uint8_t fcRank;
+    char fcName[20];
+    uint64_t unknown8;
+    char fcTag[5];
+  };
+
   struct FFXIVIpcExamineFreeCompanyInfo : FFXIVIpcBasePacket< ExamineFreeCompanyInfo >
   {
     char unknown[0x20]; // likely fc allegiance/icon/housing info etc
