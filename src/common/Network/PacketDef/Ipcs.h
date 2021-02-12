@@ -55,8 +55,8 @@ namespace Sapphire::Network::Packets
     ActorSetPos = 0x0164, // updated v5.3
     AddStatusEffect = 0x0156, // updated v5.3
     AirshipExplorationResult = 0x03200, // global
-    AirshipStatus = 0x007D0, // global
-    AirshipStatusList = 0x035C0, // global
+    AirshipStatus = 0x02F7, // updated v5.3
+    AirshipStatusList = 0x0333, // updated v5.3
     AirshipTimers = 0x01D60, // global
     AoeEffect16 = 0x03A7, // updated v5.3
     AoeEffect24 = 0x016B, // updated v5.3
@@ -106,7 +106,7 @@ namespace Sapphire::Network::Packets
     EventPlay8 = 0x023F0, // global
     EventStart = 0x008B, // updated v5.3
     Examine = 0x017B, // updated v5.3
-    ExamineFreeCompanyInfo = 0xF13E0, // global
+    ExamineFreeCompanyInfo = 0x01B7, // updated v5.3
     ExamineSearchComment = 0x01020, // global
     ExamineSearchInfo = 0x01E5, // updated v5.3
     FreeCompanyBoardMsg = 0x013C0, // global
@@ -218,7 +218,7 @@ namespace Sapphire::Network::Packets
     StatusEffectList = 0x0314, // updated v5.3
     SubmarineExplorationResult = 0x02BB0, // global
     SubmarineProgressionStatus = 0x03B40, // global
-    SubmarineStatusList = 0x02F00, // global
+    SubmarineStatusList = 0x034F, // updated v5.3
     SubmarineTimers = 0x03DA0, // global
     UpdateClassInfo = 0x00B3, // updated v5.3
     UpdateHpMpTp = 0x02A3, // updated v5.3
