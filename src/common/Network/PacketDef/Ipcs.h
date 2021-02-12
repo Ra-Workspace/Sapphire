@@ -57,7 +57,7 @@ namespace Sapphire::Network::Packets
     AirshipExplorationResult = 0x0090, // updated v5.3
     AirshipStatus = 0x02F7, // updated v5.3
     AirshipStatusList = 0x0333, // updated v5.3
-    AirshipTimers = 0x01D60, // global
+    AirshipTimers = 0x02DC, // updated v5.3
     AoeEffect16 = 0x03A7, // updated v5.3
     AoeEffect24 = 0x016B, // updated v5.3
     AoeEffect32 = 0x0231, // updated v5.3
@@ -217,9 +217,9 @@ namespace Sapphire::Network::Packets
     SomeDirectorUnk8 = 0x028A0, // global
     StatusEffectList = 0x0314, // updated v5.3
     SubmarineExplorationResult = 0x0097, // updated v5.3
-    SubmarineProgressionStatus = 0x03B40, // global
+    SubmarineProgressionStatus = 0x0247, // updated v5.3
     SubmarineStatusList = 0x034F, // updated v5.3
-    SubmarineTimers = 0x03DA0, // global
+    SubmarineTimers = 0x02D7, // updated v5.3
     UpdateClassInfo = 0x00B3, // updated v5.3
     UpdateHpMpTp = 0x02A3, // updated v5.3
     UpdateInventorySlot = 0x0250, // updated v5.3
