@@ -415,7 +415,6 @@ namespace Sapphire::Network::Packets::Server
     uint8_t unknow7;
     uint8_t fcRank;
     char fcName[20];
-    uint64_t unknown8;
     char fcTag[5];
   };
 
