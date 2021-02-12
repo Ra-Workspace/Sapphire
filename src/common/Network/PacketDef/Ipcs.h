@@ -54,6 +54,10 @@ namespace Sapphire::Network::Packets
     ActorOwner = 0x00E80, // global
     ActorSetPos = 0x0164, // updated v5.3
     AddStatusEffect = 0x0156, // updated v5.3
+    AirshipExplorationResult = 0x03200, // global
+    AirshipStatus = 0x007D0, // global
+    AirshipStatusList = 0x035C0, // global
+    AirshipTimers = 0x01D60, // global
     AoeEffect16 = 0x03A7, // updated v5.3
     AoeEffect24 = 0x016B, // updated v5.3
     AoeEffect32 = 0x0231, // updated v5.3
@@ -212,6 +216,10 @@ namespace Sapphire::Network::Packets
     SomeDirectorUnk4 = 0x023E, // updated v5.3
     SomeDirectorUnk8 = 0x028A0, // global
     StatusEffectList = 0x0314, // updated v5.3
+    SubmarineExplorationResult = 0x02BB0, // global
+    SubmarineProgressionStatus = 0x03B40, // global
+    SubmarineStatusList = 0x02F00, // global
+    SubmarineTimers = 0x03DA0, // global
     UpdateClassInfo = 0x00B3, // updated v5.3
     UpdateHpMpTp = 0x02A3, // updated v5.3
     UpdateInventorySlot = 0x0250, // updated v5.3
@@ -227,129 +235,97 @@ namespace Sapphire::Network::Packets
   */
   enum ClientZoneIpcType : uint16_t
   {
-    PingHandler = 0x02190, // global
-    InitHandler = 0x01850, // global
-
-    FinishLoadingHandler = 0x01BE0, // global
-
-    CFCommenceHandler = 0x01180, // global
-
+    AoESkillHandler = 0x030C0, // global
+    BlackListHandler = 0x00790, // global
+    BuildPresetHandler = 0x01500, // global
     CFCancelHandler = 0x03320, // global
+    CFCommenceHandler = 0x01180, // global
+    CFDutyInfoHandler = 0x00780, // global
     CFRegisterDuty = 0x02890, // global
     CFRegisterRoulette = 0x00880, // global
-    PlayTimeHandler = 0x02A80, // global
-    LogoutHandler = 0x00EC0, // global
     CancelLogout = 0x03DB0, // global
-
-    CFDutyInfoHandler = 0x00780, // global
-
-    SocialReqSendHandler = 0x03870, // global
-    SocialResponseHandler = 0x028D0, // global
-    CreateCrossWorldLS = 0x00AF0, // global
-
     ChatHandler = 0x00BF, // updated v5.3
-    PartyChatHandler = 0x0065,
-    PartySetLeaderHandler = 0x02080, // global
-    LeavePartyHandler = 0x03370, // global
-    KickPartyMemberHandler = 0x014C0, // global
+    ClientTrigger = 0x033A, // updated v5.3
+    CreateCrossWorldLS = 0x00AF0, // global
     DisbandPartyHandler = 0x02050, // global
-
-    SocialListHandler = 0x03400, // global
-    SetSearchInfoHandler = 0x0303, // updated v5.3
-    ReqSearchInfoHandler = 0x01E90, // global
-    ReqExamineSearchCommentHandler = 0x00E70, // global
-
-    ReqRemovePlayerFromBlacklist = 0x00F10, // global
-    BlackListHandler = 0x00790, // global
-    PlayerSearchHandler = 0x00F40, // global
-
+    DiscoveryHandler = 0x00E30, // global
+    Dive = 0x02CC0, // global
+    EmoteEventHandler = 0x02C80, // global
+    EnterTeriEventHandler = 0x01920, // global
+    FcInfoReqHandler = 0x011A0, // global
+    FinishLoadingHandler = 0x01BE0, // global
+    FreeCompanyUpdateShortMessageHandler = 0x01230, // global
+    GMCommand1 = 0x02AC0, // global
+    GMCommand2 = 0x029F0, // global
+    HousingUpdateHouseGreeting = 0x01780, // global
+    HousingUpdateObjectPosition = 0x01590, // global
+    InitHandler = 0x01850, // global
+    InventoryEquipRecommendedItems = 0x01490, // global
+    InventoryModifyHandler = 0x019A, // updated v5.3 (Base offset: 0x01A1)
+    KickPartyMemberHandler = 0x014C0, // global
+    LandRenameHandler = 0xF1770, // global
+    LeavePartyHandler = 0x03370, // global
+    LinkshellEventHandler = 0x016B0, // global
+    LinkshellEventHandler1 = 0x016C0, // global
     LinkshellListHandler = 0x024B0, // global
-
+    LogoutHandler = 0x00EC0, // global
     MarketBoardRequestItemListingInfo = 0x01020, // global
     MarketBoardRequestItemListings = 0x01030, // global
     MarketBoardSearch = 0x01070, // global
-
-    ReqExamineFcInfo = 0x01130, // global
-
-    FcInfoReqHandler = 0x011A0, // global
-
-    FreeCompanyUpdateShortMessageHandler = 0x01230, // global
-
-    ReqMarketWishList = 0x012C0, // global
-
-    ReqJoinNoviceNetwork = 0x01290, // global
-
-    ReqCountdownInitiate = 0x009A0, // global
-    ReqCountdownCancel = 0x02440, // global
-
-    ZoneLineHandler = 0x02790, // global
-    ClientTrigger = 0x033A, // updated v5.3
-    DiscoveryHandler = 0x00E30, // global
-
-    SkillHandler = 0x01CD0, // global
-    GMCommand1 = 0x02AC0, // global
-    GMCommand2 = 0x029F0, // global
-    AoESkillHandler = 0x030C0, // global
-
-    UpdatePositionHandler = 0x017D, // updated v5.3
-
-    InventoryModifyHandler = 0x019A, // updated v5.3 (Base offset: 0x01A1)
-    
-    InventoryEquipRecommendedItems = 0x01490, // global
-
-    ReqPlaceHousingItem = 0x014B0, // global
-    BuildPresetHandler = 0x01500, // global
-
-    TalkEventHandler = 0x02A40, // global
-    EmoteEventHandler = 0x02C80, // global
-    WithinRangeEventHandler = 0x02090, // global
     OutOfRangeEventHandler = 0x03190, // global
-    EnterTeriEventHandler = 0x01920, // global
-    ShopEventHandler = 0x01560, // global
-
-    ReturnEventHandler = 0x02B40, // global
-    TradeReturnEventHandler = 0x00A40, // global
-    TradeMultipleReturnEventHander = 0x035C0, // global
-
-    LinkshellEventHandler = 0x016B0, // global
-    LinkshellEventHandler1 = 0x016C0, // global
-
-    ReqEquipDisplayFlagsChange = 0x02F60, // global
-
-    LandRenameHandler = 0xF1770, // global
-    HousingUpdateHouseGreeting = 0x01780, // global
-    HousingUpdateObjectPosition = 0x01590, // global
-
-    SetSharedEstateSettings = 0x017B0, // global
-
-    UpdatePositionInstance = 0x0067, // updated v5.3
-
+    PartyChatHandler = 0x0065,
+    PartySetLeaderHandler = 0x02080, // global
     PerformNoteHandler = 0x029B0, // global
-
+    PingHandler = 0x02190, // global
+    PlayTimeHandler = 0x02A80, // global
+    PlayerSearchHandler = 0x00F40, // global
+    ReqCountdownCancel = 0x02440, // global
+    ReqCountdownInitiate = 0x009A0, // global
+    ReqEquipDisplayFlagsChange = 0x02F60, // global
+    ReqExamineFcInfo = 0x01130, // global
+    ReqExamineSearchCommentHandler = 0x00E70, // global
+    ReqJoinNoviceNetwork = 0x01290, // global
+    ReqMarketWishList = 0x012C0, // global
+    ReqPlaceHousingItem = 0x014B0, // global
+    ReqRemovePlayerFromBlacklist = 0x00F10, // global
+    ReqSearchInfoHandler = 0x01E90, // global
+    ReturnEventHandler = 0x02B40, // global
+    SetSearchInfoHandler = 0x0303, // updated v5.3
+    SetSharedEstateSettings = 0x017B0, // global
+    ShopEventHandler = 0x01560, // global
+    SkillHandler = 0x01CD0, // global
+    SocialListHandler = 0x03400, // global
+    SocialReqSendHandler = 0x03870, // global
+    SocialResponseHandler = 0x028D0, // global
+    TalkEventHandler = 0x02A40, // global
+    TradeMultipleReturnEventHander = 0x035C0, // global
+    TradeReturnEventHandler = 0x00A40, // global
+    UpdatePositionHandler = 0x017D, // updated v5.3
+    UpdatePositionInstance = 0x0067, // updated v5.3
+    WithinRangeEventHandler = 0x02090, // global
     WorldInteractionHandler = 0x00A90, // global
-    Dive = 0x02CC0, // global
+    ZoneLineHandler = 0x02790, // global
   };
 
-  ////////////////////////////////////////////////////////////////////////////////
-  /// Chat Connection IPC Codes
-  /**
-  * Server IPC Chat Type Codes.
-  */
-  enum ServerChatIpcType : uint16_t
-  {
-    Tell = 0x0064, // updated for sb
-    TellErrNotFound = 0x0066,
+    ////////////////////////////////////////////////////////////////////////////////
+    /// Chat Connection IPC Codes
+    /**
+    * Server IPC Chat Type Codes.
+    */
+    enum ServerChatIpcType : ushort
+    {
+        Tell = 0x0064, // updated for sb
+        TellErrNotFound = 0x0066,
+        FreeCompanyEvent = 0x012C,
+    };
 
-    FreeCompanyEvent = 0x012C,
-  };
-
-  /**
-  * Client IPC Chat Type Codes.
-  */
-  enum ClientChatIpcType : uint16_t
-  {
-    TellReq = 0x0064,
-  };
+    /**
+    * Client IPC Chat Type Codes.
+    */
+    enum ClientChatIpcType : ushort
+    {
+      TellReq = 0x0064,
+    };
 
 
 }

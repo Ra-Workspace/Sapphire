@@ -2241,6 +2241,163 @@ namespace Sapphire::Network::Packets::Server
     char memberName[32];
     uint8_t padding[3];
   };
+
+  struct FFXIVIpcSomeDirectorUnk4 : FFXIVIpcBasePacket< FFXIVIpcSomeDirectorUnk4 >
+  {
+    uint32_t eventId;
+    uint32_t param1;
+    uint32_t param2;
+    uint32_t param3;
+    uint8_t param4;
+    uint8_t unknown1;
+    uint16_t unknown2;
+    uint32_t unknown3;
+  }
+
+  struct FFXIVIpcAirshipStatusList : FFXIVIpcBasePacket< AirshipStatusList >
+  {
+    uint8_t unlockedAirshipCount;
+    uint8_t unknown0[3];
+    struct AirshipStatusItem
+    {
+      uint32_t birthdate;
+      uint32_t returnTime;
+      uint16_t status;
+      uint16_t rank;
+      char name[20];
+      uint32_t unknown1;
+    } airships[4];
+    uint8_t unlockedSectors[4];
+    uint8_t exploredSectors[4];
+    uint32_t unknown2;
+  };
+
+  struct FFXIVIpcAirshipStatus : FFXIVIpcBasePacket< AirshipStatus >
+  {
+    uint32_t returnTime;
+    uint16_t status; // 0=not registered, 1=idle, 2=exploring
+    uint16_t rank;
+    uint16_t capacity;
+    uint16_t unknown0;
+    uint32_t currentExp;
+    uint32_t totalExpForNextRank;
+    uint16_t unlockedAirshipCount;
+    uint16_t airshipPart[4];
+    uint8_t destinations[5];
+    char name[20];
+    uint8_t unknown2;
+    uint16_t unknown3;
+    uint8_t unlockedSectors[4];
+    uint8_t exploredSectors[4];
+    uint16_t unknown4;
+    uint32_t unknown5;
+  };
+
+  struct FFXIVIpcAirshipExplorationResult : FFXIVIpcBasePacket< AirshipExplorationResult >
+  {
+    uint16_t rating; // 0=SS, 1=S, 2=A, 3=B, 4=C
+    uint16_t airshipSpeed;
+    struct ResultItem
+    {
+      uint32_t exp;
+      uint32_t favorResult;
+      uint8_t sectorId;
+      uint8_t discoveredSectorId;
+      uint8_t expRating; // 2=100%, 3=50%,
+      uint8_t unknown3;
+      uint32_t itemId[2];
+      uint16_t quantity[2];
+      uint32_t surveillanceResult[2];
+      uint32_t retrievalResult[2];
+      uint32_t itemQualityMessage[2];
+      uint16_t unknown4;
+      uint8_t unknown5;
+      uint8_t doubleDip; // 0=false, 1=true
+      uint8_t hq[2]; // 0=false, 1=true
+      uint16_t unknown6; // isTierLoot3??
+    } destinationResults[5];
+    uint32_t unknown7;
+  };
+
+  struct FFXIVIpcAirshipTimers : FFXIVIpcBasePacket< AirshipTimers >
+  {
+    struct AirshipStatusItem
+    {
+      uint32_t returnTime;
+      uint16_t airshipSpeed;
+      char name[20];
+      uint16_t unknown1;
+      uint8_t unknown2;
+      uint8_t destinations[5];
+      uint16_t unknown3;
+    } airships[4];
+  };
+
+  struct FFXIVIpcSubmarineTimers : FFXIVIpcBasePacket< SubmarineTimers >
+  {
+    struct SubmarineStatusItem
+    {
+      uint32_t returnTime;
+      uint16_t submarineSpeed;
+      uint16_t unknown1;
+      char name[20];
+      uint8_t unknown2[3];
+      uint8_t destinations[5];
+    } submarine[4];
+  };
+
+  struct FFXIVIpcSubmarineProgressionStatus : FFXIVIpcBasePacket< SubmarineProgressionStatus >
+  {
+      uint8_t unlockedSubmarineCount;
+      uint8_t unlockedSectors[10];
+      uint8_t exploredSectors[10];
+      uint8_t unknown[2];
+  };
+
+  struct FFXIVIpcSubmarineStatusList : FFXIVIpcBasePacket< SubmarineStatusList >
+  {
+    struct SubmarineStatusItem
+    {
+      uint16_t status; // 0=not registered, 1=idle, 2=exploring
+      uint16_t rank;
+      uint32_t birthdate;
+      uint32_t returnTime;
+      uint32_t currentExp;
+      uint32_t totalExpForNextRank;
+      uint16_t capacity;
+      char name[20];
+      uint16_t padding[2];
+      uint16_t submarinePart[4];
+      uint8_t destinations[5];
+      uint8_t unknown0;
+    } submarines[4];
+  };
+
+  struct FFXIVIpcSubmarineExplorationResult : FFXIVIpcBasePacket< SubmarineExplorationResult >
+  {
+    uint16_t rating; // 0=SS, 1=S, 2=A, 3=B, 4=C
+    uint16_t submarineSpeed;
+    struct ResultItem
+    {
+      uint8_t sectorId;
+      uint8_t expRating; // 0=100%, 1=75%, 2=50%, 3=25%
+      uint8_t discoveredSectorId;
+      uint8_t firstTimeExploration; // 0=false, 1=true
+      uint8_t unlockedSubmarineSlot;
+      uint8_t doubleDip; // 0=false, 1=true
+      uint16_t unknown4;
+      uint32_t favorResult;
+      uint32_t exp;
+      uint32_t itemId[2];
+      uint16_t quantity[2];
+      uint8_t hq[2];
+      uint8_t surveillanceTier3[2]; // 0=true, 1=false
+      uint32_t surveillanceResult[2];
+      uint32_t retrievalResult[2];
+      uint32_t itemQualityMessage[2];
+    } destinationResults[5];
+    uint32_t unknown7;
+  };
 }
 
 #endif /*_CORE_NETWORK_PACKETS_SERVER_IPC_H*/
