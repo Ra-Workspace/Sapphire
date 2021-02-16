@@ -47,7 +47,7 @@ namespace Sapphire::Network::Packets
     ActorControl = 0x0347, // updated v5.31
     ActorControlSelf = 0x02FC, // updated v5.31
     ActorControlTarget = 0x0325, // updated v5.31
-    ActorFreeSpawn = 0x0166, // updated v5.31
+    ActorFreeSpawn = 0x025F, // updated v5.31
     ActorGauge = 0x0192, // updated v5.31
     ActorMove = 0x02DA, // updated v5.31
     ActorOwner = 0x00E80, // global
@@ -63,10 +63,10 @@ namespace Sapphire::Network::Packets
     BlackList = 0x02DB0, // global
     CFAvailableContents = 0xF1FD0, // global
     CFCancel = 0x00EC0, // global
-    CFDutyInfo = 0x007A,
-    CFMemberStatus = 0x0079,
+    CFDutyInfo = 0x007A0, // global
+    CFMemberStatus = 0x00790, // global
     CFNotify = 0x0134, // updated v5.31
-    CFPlayerInNeed = 0xF07F,
+    CFPlayerInNeed = 0xF07F0,, // global
     CFPreferredRole = 0x0115, // updated v5.31
     CFRegistered = 0x010C0, // global
     CancelAllianceForming = 0x00C60, // global
@@ -74,7 +74,7 @@ namespace Sapphire::Network::Packets
     CharaNameReq = 0x008E0, // global
     CharaVisualEffect = 0x02E20, // global
     Chat = 0x03490, // global
-    ChatBanned = 0xF06B,
+    ChatBanned = 0xF06B0, // global
     ContainerInfo = 0x00C50, // global
     CountdownCancel = 0x00D90, // global
     CountdownInitiate = 0x02370, // global
