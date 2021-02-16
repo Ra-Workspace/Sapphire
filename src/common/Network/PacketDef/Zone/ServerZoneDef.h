@@ -591,10 +591,11 @@ namespace Sapphire::Network::Packets::Server
     uint8_t effectCount; // ignores effects if 0, otherwise parses all of them
     uint16_t padding_21;
 
+    //
     uint32_t padding1;
     uint16_t padding2;
 
-    uint32_t effects[8*8];
+    uint32_t effects[16];
 
     uint16_t padding3;
     uint32_t padding4;
