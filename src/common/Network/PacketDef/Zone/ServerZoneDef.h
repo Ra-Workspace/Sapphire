@@ -564,16 +564,17 @@ namespace Sapphire::Network::Packets::Server
 
   struct FFXIVIpcEffect : FFXIVIpcBasePacket< Effect >
   {
-    uint64_t animationTargetId; // who the animation targets
-
+    uint32_t animationTargetId; // who the animation targets
+    uint32_t unknown;
     uint32_t actionId; // what the casting player casts, shown in battle log/ui
     /*!
      * @brief Zone sequence for the effect. Used to link effects that are split across multiple packets as one
      */
-    uint32_t sequence;
+    uint32_t globalEffectCounter;
 
     float animationLockTime; // maybe? doesn't seem to do anything
     uint32_t someTargetId; // always 0x0E000000?
+    uint16_t hiddenAnimation;
 
     /*!
      * @brief The cast sequence from the originating player. Should only be sent to the source, 0 for every other player.
@@ -581,7 +582,6 @@ namespace Sapphire::Network::Packets::Server
      * This needs to match the sequence sent from the player in the action start packet otherwise you'll cancel the
      * initial animation and start a new one once the packet arrives.
      */
-    uint16_t sourceSequence;
     uint16_t rotation;
     uint16_t actionAnimationId; // the animation that is played by the casting character
     uint8_t variation; // variation in the animation
@@ -591,16 +591,17 @@ namespace Sapphire::Network::Packets::Server
     uint8_t effectCount; // ignores effects if 0, otherwise parses all of them
     uint16_t padding_21;
 
-    uint16_t padding_22[3];
+    uint32_t padding1;
+    uint16_t padding2;
 
-    uint8_t effects[8*8];
+    uint32_t effects[8*8];
 
-    uint16_t padding_6A[3];
+    uint16_t padding3;
+    uint32_t padding4;
 
-    uint32_t effectTargetId; // who the effect targets
-    uint32_t effectFlags; // nonzero = effects do nothing, no battle log, no ui text - only shows animations
-
-    uint32_t padding_78;
+    uint64_t effectTargetId[1]; // who the effect targets
+    //uint32_t effectFlags; // nonzero = effects do nothing, no battle log, no ui text - only shows animations
+    uint32_t padding_5;
   };
 
   template< int size >
