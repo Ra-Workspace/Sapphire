@@ -52,6 +52,7 @@ namespace Sapphire::Network::Packets
     ActorMove = 0x02DA, // updated v5.31
     ActorOwner = 0x00E80, // global
     ActorSetPos = 0x022B, // updated v5.31
+    AddStatusEffect = 0x0156, // updated v5.3
     AirshipExplorationResult = 0x0113, // updated v5.31
     AirshipStatus = 0x0295, // updated v5.31
     AirshipStatusList = 0x0091, // updated v5.31
@@ -61,6 +62,7 @@ namespace Sapphire::Network::Packets
     AoeEffect32 = 0x03B3, // updated v5.31
     AoeEffect8 = 0x03DA, // updated v5.31
     BlackList = 0x02DB0, // global
+    BossStatusEffectList = 0x0000, // global
     CFAvailableContents = 0xF1FD0, // global
     CFCancel = 0x00EC0, // global
     CFDutyInfo = 0x007A0, // global
