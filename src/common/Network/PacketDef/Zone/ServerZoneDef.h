@@ -405,7 +405,7 @@ namespace Sapphire::Network::Packets::Server
   struct FFXIVIpcFreeCompanyInfo : FFXIVIpcBasePacket< FreeCompanyInfo >
   {
     uint64_t fcId;
-    uint32_t unknown1;
+    uint32_t fcIcon;
     uint32_t unknown2;
     uint64_t unknown3;
     uint64_t fcCredits;
