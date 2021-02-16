@@ -464,6 +464,24 @@ namespace Sapphire::Network::Packets::Server
     uint32_t padding;
   };
 
+  struct FFXIVIpcBossStatusEffectList : FFXIVIpcBasePacket< BossStatusEffectList >
+  {
+    uint8_t Effects2[30 * 3 * 4];
+    uint8_t classId;
+    uint8_t level1;
+    uint8_t level2;
+    uint8_t level3;
+    uint32_t current_hp;
+    uint32_t max_hp;
+    uint16_t current_mp;
+    uint16_t max_mp;
+    uint16_t unknown;
+    uint8_t shieldPercentage;
+    uint8_t unknown;
+    uint8_t Effects2[30 * 3 * 4];
+    uint32_t padding;
+  };
+
   struct FFXIVGCAffiliation : FFXIVIpcBasePacket< GCAffiliation >
   {
     uint8_t gcId;
@@ -557,9 +575,6 @@ namespace Sapphire::Network::Packets::Server
     /* 0000 */ uint32_t hp;
     /* 0004 */ uint16_t mp;
     /* 0006 */ uint16_t tp;
-    /* 0008 */ uint16_t gp;
-    /* 0010 */ uint16_t unknown_10;
-    /* 0012 */ uint32_t unknown_12;
   };
 
   struct FFXIVIpcEffect : FFXIVIpcBasePacket< Effect >
