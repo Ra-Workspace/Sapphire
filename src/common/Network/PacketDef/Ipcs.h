@@ -77,7 +77,7 @@ namespace Sapphire::Network::Packets
     CharaVisualEffect = 0x02E20, // global
     Chat = 0x03490, // global
     ChatBanned = 0xF06B0, // global
-    ContainerInfo = 0x00C50, // global
+    ContainerInfo = 0x021C,// updated v5.35
     CountdownCancel = 0x00D90, // global
     CountdownInitiate = 0x02370, // global
     CurrencyCrystalInfo = 0x0069,// updated v5.35
@@ -111,6 +111,7 @@ namespace Sapphire::Network::Packets
     ExamineSearchComment = 0x01020, // global
     ExamineSearchInfo = 0x039F,// updated v5.35
     FreeCompanyBoardMsg = 0x013C0, // global
+    FreeCompanyDialog = 0x0309, // updated v5.35
     FreeCompanyInfo = 0x01D3,// updated v5.35
     FreeCompanyUpdateShortMessage = 0xF1570, // global
     GCAffiliation = 0xF16F0, // global

@@ -401,8 +401,9 @@ namespace Sapphire::Network::Packets::Server
 
   /**
   * todo: not sure packet
+  * name changed FreeCompanyInfo to FreeCompanyDialog for @ffxiv-teamcraft/pcap-ffxiv
   */
-  struct FFXIVIpcFreeCompanyInfo : FFXIVIpcBasePacket< FreeCompanyInfo >
+  struct FFXIVIpcFreeCompanyDialog : FFXIVIpcBasePacket< FreeCompanyDialog >
   {
     uint64_t fcId;
     uint32_t fcIcon;
@@ -418,6 +419,14 @@ namespace Sapphire::Network::Packets::Server
     uint16_t padding1;
     char fcTag[5];
     uint16_t padding2;
+  };
+
+    struct FFXIVIpcFreeCompanyInfo : FFXIVIpcBasePacket< FreeCompanyInfo >
+  {
+    uint64_t fcId;
+    uint8_t unknown0[37];
+    uint8_t rank;
+    uint8_t unknown0[34];
   };
 
   struct FFXIVIpcExamineFreeCompanyInfo : FFXIVIpcBasePacket< ExamineFreeCompanyInfo >
@@ -2162,7 +2171,7 @@ namespace Sapphire::Network::Packets::Server
     uint32_t retainerTask;
     uint32_t retainerTaskComplete;
     uint8_t unknown14;
-    char retainerName[20];
+    char retainerName[27];
   };
 
   struct FFXIVIpcCharaVisualEffect : FFXIVIpcBasePacket< CharaVisualEffect >
