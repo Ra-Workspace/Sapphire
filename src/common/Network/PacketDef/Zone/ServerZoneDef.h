@@ -426,7 +426,7 @@ namespace Sapphire::Network::Packets::Server
     uint64_t fcId;
     uint8_t unknown0[37];
     uint8_t rank;
-    uint8_t unknown0[34];
+    uint8_t unknown1[34];
   };
 
   struct FFXIVIpcExamineFreeCompanyInfo : FFXIVIpcBasePacket< ExamineFreeCompanyInfo >
