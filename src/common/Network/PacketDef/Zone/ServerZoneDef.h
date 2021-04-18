@@ -461,14 +461,33 @@ namespace Sapphire::Network::Packets::Server
   {
     uint8_t classId;
     uint8_t level1;
-    uint16_t level;
+    uint8_t level2;
+    uint8_t level3;
     uint32_t current_hp;
     uint32_t max_hp;
     uint16_t current_mp;
     uint16_t max_mp;
-    uint8_t shieldPercentage;
-    uint8_t unknown1;
-    uint16_t unknown2;
+    uint16_t unknown1;
+    uint8_t DamageShield;
+    uint8_t unknown2;
+    Common::StatusEffect effect[30];
+    uint32_t padding;
+  };
+
+    struct FFXIVIpcStatusEffectList2 : FFXIVIpcBasePacket< StatusEffectList2 >
+  {
+    uint32_t unknown3;
+    uint8_t classId;
+    uint8_t level1;
+    uint8_t level2;
+    uint8_t level3;
+    uint32_t current_hp;
+    uint32_t max_hp;
+    uint16_t current_mp;
+    uint16_t max_mp;
+    uint16_t unknown1;
+    uint8_t DamageShield;
+    uint8_t unknown2;
     Common::StatusEffect effect[30];
     uint32_t padding;
   };
