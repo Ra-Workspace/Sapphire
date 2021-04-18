@@ -474,7 +474,7 @@ namespace Sapphire::Network::Packets::Server
     uint32_t padding;
   };
 
-    struct FFXIVIpcStatusEffectList2 : FFXIVIpcBasePacket< StatusEffectList2 >
+  struct FFXIVIpcStatusEffectList2 : FFXIVIpcBasePacket< StatusEffectList2 >
   {
     uint32_t unknown3;
     uint8_t classId;
