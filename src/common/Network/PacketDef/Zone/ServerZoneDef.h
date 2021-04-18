@@ -494,7 +494,7 @@ namespace Sapphire::Network::Packets::Server
 
   struct FFXIVIpcBossStatusEffectList : FFXIVIpcBasePacket< BossStatusEffectList >
   {
-    uint8_t Effects2[30 * 3 * 4];
+    Common::StatusEffect effects2[30];
     uint8_t classId;
     uint8_t level1;
     uint8_t level2;
@@ -506,7 +506,7 @@ namespace Sapphire::Network::Packets::Server
     uint16_t unknown;
     uint8_t shieldPercentage;
     uint8_t unknown;
-    uint8_t Effects2[30 * 3 * 4];
+    Common::StatusEffect effects1[30];
     uint32_t padding;
   };
 
