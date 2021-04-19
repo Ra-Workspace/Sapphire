@@ -188,7 +188,6 @@ namespace Sapphire::Network::Packets
     PlayerTitleList = 0x037D0, // global
     Playtime = 0x00F0,// updated v5.35
     PrepareZoning = 0x01A0,// updated v5.35
-    PrepareZoning = 0x026C0, // global
     QuestActiveList = 0x01170, // global
     QuestCompleteList = 0x02400, // global
     QuestFinish = 0x00E90, // global
@@ -218,7 +217,7 @@ namespace Sapphire::Network::Packets
     SomeDirectorUnk4 = 0x0169,// updated v5.35
     SomeDirectorUnk8 = 0x028A0, // global
     StatusEffectList = 0x034B,// updated v5.35
-    StatusEffectList2 = 0x030E,// updated v5.35?
+    StatusEffectList2 = 0x030E,// updated v5.35
     SubmarineExplorationResult = 0x030A, // updated v5.35
     SubmarineProgressionStatus = 0x03A0,// updated v5.35
     SubmarineStatusList = 0x03C6,// updated v5.35
