@@ -503,9 +503,9 @@ namespace Sapphire::Network::Packets::Server
     uint32_t max_hp;
     uint16_t current_mp;
     uint16_t max_mp;
-    uint16_t unknown;
+    uint16_t unknown1;
     uint8_t shieldPercentage;
-    uint8_t unknown;
+    uint8_t unknown2;
     Common::StatusEffect effects1[30];
     uint32_t padding;
   };
