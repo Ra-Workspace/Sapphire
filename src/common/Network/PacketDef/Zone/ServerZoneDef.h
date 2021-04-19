@@ -503,9 +503,9 @@ namespace Sapphire::Network::Packets::Server
     uint32_t max_hp;
     uint16_t current_mp;
     uint16_t max_mp;
-    uint16_t unknown1;
-    uint8_t shieldPercentage;
-    uint8_t unknown2;
+    uint16_t currentTp;
+    uint8_t DamageShield;
+    uint8_t unknown1;
     Common::StatusEffect effects1[30];
     uint32_t padding;
   };
@@ -894,8 +894,9 @@ namespace Sapphire::Network::Packets::Server
     uint32_t displayFlags;
     uint16_t fateID;
     uint16_t mPCurr;
-    uint16_t unknown1; // 0
-    uint16_t unknown2; // 0 or pretty big numbers > 30000
+    uint16_t tPCurr;
+    uint16_t mPMax;
+    uint16_t tPMax;
     uint16_t modelChara;
     uint16_t rotation;
     uint16_t activeMinion;
@@ -924,14 +925,11 @@ namespace Sapphire::Network::Packets::Server
     uint32_t models[10];
     char name[32];
     uint8_t look[26];
-    char fcTag[6];
-    uint32_t unk30;
-    uint32_t unk31;
+    char fcTag[14];
     uint8_t bNPCPartSlot;
     uint8_t unk32;
     uint16_t unk33;
     uint32_t unk34;
-    uint64_t unk35[47];
   };
 
   /**
