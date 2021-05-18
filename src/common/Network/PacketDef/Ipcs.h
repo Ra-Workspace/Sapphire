@@ -47,13 +47,13 @@ namespace Sapphire::Network::Packets
     ActorControl = 0x020A, // updated v5.4
     ActorControlSelf = 0x01A8, // updated v5.4
     ActorControlTarget = 0x0151, // updated v5.4
-    ActorFreeSpawn = 0x01A4, // updated v5.4
+    ActorFreeSpawn = 0x01A40, // unknown
     ActorGauge = 0x0112, // updated v5.4
     ActorMove = 0x019C, // updated v5.4
     ActorOwner = 0x00E80, // global
     ActorSetPos = 0x0130, // updated v5.4
     AddStatusEffect = 0x01560, // = EffectResult
-    AirshipExplorationResult = 0x032D0, // updated v5.35
+    AirshipExplorationResult = 0x02B4, // updated v5.4
     AirshipStatus = 0x0100, // updated v5.4
     AirshipStatusList = 0x01BA, // updated v5.4
     AirshipTimers = 0x0256, // updated v5.4
@@ -83,7 +83,7 @@ namespace Sapphire::Network::Packets
     CurrencyCrystalInfo = 0x034D, // updated v5.4
     DailyQuestRepeatFlags = 0x024C0, // global
     DailyQuests = 0x01390, // global
-    DesynthResult = 0x00D40, // updated v5.35
+    DesynthResult = 0x01B1, // updated v5.4
     DirectorPopUp = 0xF1620, // global. display dialogue pop-ups in duties and FATEs, for example, Teraflare's countdown
     DirectorPopUp4 = 0x02140, // global
     DirectorPopUp8 = 0x00F80, // global
@@ -101,13 +101,13 @@ namespace Sapphire::Network::Packets
     EventPlay128 = 0x038A0, // global
     EventPlay16 = 0x025C0, // global
     EventPlay255 = 0x034B0, // global
-    EventPlay32 = 0x02C30, // updated v5.35
+    EventPlay32 = 0x00DF, // updated v5.4
     EventPlay4 = 0x0072, // updated v5.4
     EventPlay64 = 0x02C10, // global
     EventPlay8 = 0x023F0, // global
     EventStart = 0x00AF, // updated v5.4
     Examine = 0x0154, // updated v5.4
-    ExamineFreeCompanyInfo = 0x03400, // updated v5.35
+    ExamineFreeCompanyInfo = 0x02AC, // updated v5.4
     ExamineSearchComment = 0x01020, // global
     ExamineSearchInfo = 0x0233, // updated v5.4
     FreeCompanyBoardMsg = 0x013C0, // global
@@ -217,8 +217,8 @@ namespace Sapphire::Network::Packets
     SomeDirectorUnk4 = 0x02E7, // updated v5.4
     SomeDirectorUnk8 = 0x028A0, // global
     StatusEffectList = 0x00EB, // updated v5.4
-    StatusEffectList2 = 0x030E0,// updated v5.35
-    SubmarineExplorationResult = 0x030A0, // updated v5.35
+    StatusEffectList2 = 0x025C, // updated v5.4
+    SubmarineExplorationResult = 0x0302, // updated v5.4
     SubmarineProgressionStatus = 0x0087, // updated v5.4
     SubmarineStatusList = 0x01AB, // updated v5.4
     SubmarineTimers = 0x00BA, // updated v5.4
@@ -227,7 +227,7 @@ namespace Sapphire::Network::Packets
     UpdateInventorySlot = 0x038D, // updated v5.4
     UpdateRetainerItemSalePrice = 0xF19F0, // global
     UpdateSearchInfo = 0x03AD, // updated v5.4
-    WeatherChange = 0x02610, // updated v5.35
+    WeatherChange = 0x009F, // updated v5.4
     WorldVisitList = 0xF0FE0, // global
     YardObjectSpawn = 0xF2360, // global
   };
