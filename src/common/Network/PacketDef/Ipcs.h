@@ -47,7 +47,6 @@ namespace Sapphire::Network::Packets
     ActorControl = 0x0217, // v5.41
     ActorControlSelf = 0x03B3, // v5.41
     ActorControlTarget = 0x01A2, // v5.41
-    ActorFreeSpawn = 0x01E9, // v5.41
     ActorGauge = 0x02BF, // v5.41
     ActorMove = 0x01BB, // v5.41
     ActorSetPos = 0x0382, // v5.41
@@ -82,7 +81,7 @@ namespace Sapphire::Network::Packets
     InventoryTransaction = 0x02E5, // v5.41
     InventoryTransactionFinish = 0x0075, // v5.41
     ItemInfo = 0x02A5, // v5.41
-    Logout = 0x0396, // v5.4 Hot-fix
+    Logout = 0x0358, // v5.41
     MarketBoardItemListing = 0x0081, // v5.41
     MarketBoardItemListingCount = 0x03A4, // v5.41
     MarketBoardItemListingHistory = 0x00C9, // v5.41
@@ -97,12 +96,12 @@ namespace Sapphire::Network::Packets
     PlayerSpawn = 0x00A9, // v5.41
     PlayerStats = 0x0308, // v5.41
     Playtime = 0x03AC, // v5.41
-    PrepareZoning = 0x0143, // v5.4 Hot-fix
+    PrepareZoning = 0x0288, // v5.41
     ResultDialog = 0x00CC, // v5.41
     RetainerInformation = 0x011B, // v5.41
     SomeDirectorUnk4 = 0x00F5, // v5.41
     StatusEffectList = 0x0235, // v5.41
-    StatusEffectList2 = 0x0389, // v5.4 Hot-fix
+    StatusEffectList2 = 0x02EA, // v5.41
     SubmarineExplorationResult = 0x01C8, // v5.41
     SubmarineProgressionStatus = 0x01B5, // v5.41
     SubmarineStatusList = 0x01B6, // v5.41
@@ -111,8 +110,9 @@ namespace Sapphire::Network::Packets
     UpdateHpMpTp = 0x00AD, // v5.41
     UpdateInventorySlot = 0x026E, // v5.41
     UpdateSearchInfo = 0x0342, // v5.41
-    WeatherChange = 0x01A9, // v5.4 Hot-fix
+    WeatherChange = 0x019E, // v5.41
     
+    ActorFreeSpawn = 0x001E9, // v5.41
     ActorOwner = 0x00E80, // global
     AddStatusEffect = 0x01560, // = EffectResult
     BlackList = 0x02DB0, // global
